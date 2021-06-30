@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+######### В этом файле составляем верстку к странице потверждения опроса пользователем}
+{% block block_next %}
+<header xmlns="http://www.w3.org/1999/html">
+    <div class="container-md" >
+        <div class="row">
+          <div class="col-sm-12">
+                <div class="div_headerr">
+                   <div class="div_send">
+                     <ul>
+                         <li>Опрос</li>
+                         <li><a class="a_documentasion" href="{% url 'documentations' %}">Документация</a></li>
+                     </ul>
+                   </div>
+                 </div>
+                 <div class="div_end">
+                    <h4 class="ha_end_thank">Пожалуйста</h4>
+                    <h4 class="ha_end conf">Потвердите свои ответы</h4>
+                </div>
+              <div class="div_after btn_">
+              <a href="{% url 'snd' %}"><button type="submit" class="btn btn-secondary" id="button">Потвердить</button></a>
+              </div>
+              <div class="div_after btn_2">
+                  <a href="{% url 'ques' %}"><button type="submit" class="btn btn-secondary btn_next" id="button">Назад</button></a>
+              </div>
+          </div>
+        </div>
+    </div>
+</header>
+{% endblock %}

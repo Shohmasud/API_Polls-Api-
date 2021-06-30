@@ -1,0 +1,59 @@
+{% block forms %}
+    {########## В этом блоке составляем верстку для типов кнопок,для нажатия а не сам вопрос}#}
+     <div class="container container_questions">
+       <div class="row">
+          <div class="col-sm-1">
+              <div class="div_blockall">
+                 <form method="post">
+                   <div class="form-group">
+                     {% csrf_token %}
+                       <div class="all_checkButton">
+                             <div class="checkbox check1">{########## В этом блоке получаем типы кнопок Checkbox}#}
+                                 <div class="div_all block_ch1 k2"><h5 class="click_checkbutton  ch1" id="f">{{ send.check}}</h5></div>
+                                 <div class="div_all block_ch2 k3"><h6 class="click_checkbutton ch2" id="f">{{ send.check_1}}</h6></div>
+                             </div>
+                       </div>
+                       <div class="radiobutton">{########## В этом блоке получаем типы кнопок Radio}#}
+                           <div class="div_all_radio"><h6 class="click_radio">{{ send.RadiobuttonClick_1 }}</h6></div>
+                                 <div class="div_all_radio block_r1">
+                                      <h6 class="click_radio r2">{{ send.RadiobuttonClick_2}}</h6>
+                                 </div>
+
+                                 <div class="div_all_radio block_r2">
+                                      <h6 class="click_radio r3">{{ send.RadiobuttonClick_3 }}</h6>
+                                 </div>
+                                 <div class="div_all_radio block_r3">
+                                      <h6 class="click_radio r4">{{ send.RadiobuttonClick_4}}</h6>
+                                 </div>
+
+                                 <div class="div_all_radio block_r4">
+                                     <h6 class="click_radio r5">{{ send.RadiobuttonClick_5 }}</h6>
+                                 </div>
+                                 <div class="div_all_radio block_r5">
+                                       <h6 class="click_radio r6">{{ send.RadiobuttonClick_6}}</h6>
+                                 </div>
+                                                            <div class="div_all_radio block_r2">
+                                      <h6 class="click_radio r7">{{ send.RadiobuttonClick_7 }}</h6>
+                                 </div>
+                                 <div class="div_all_radio block_r6">
+                                      <h6 class="click_radio r8">{{ send.RadiobuttonClick_8}}</h6>
+                                 </div>
+
+                                 <div class="div_all_radio block_r7">
+                                     <h6 class="click_radio r9">{{ send.RadiobuttonClick_9 }}</h6>
+                                 </div>
+                                 <div class="div_all_radio block_r8">
+                                       <h6 class="click_radio r10">{{ send.RadiobuttonClick_10}}</h6>
+                                 </div>
+                       </div>
+                   </div>
+                     <div class="div_button_send button">
+                     <button type="submit" class="btn btn-secondary" id="button">Продолжить</button>
+                     </div>
+                   </form>
+               </div>
+          </div>
+       </div>
+     </div>
+
+{% endblock %}

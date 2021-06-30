@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Опрос</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/css_api.css' %}">
+</head>
+<body>
+
+{########### Блок относится к данным страницы polls.html .Страница входа по внутреннему API#}
+{% block heading %}{% endblock%}
+{% block polls %}{% endblock%}
+{% block id_text %}{% endblock%}
+{% block ip_text %}{% endblock%}
+{% block tracback %}{% endblock%}
+{% block search_text %}{% endblock%}
+{%block heading_Questions%}{% endblock %}
+{%block heading_descriptions%}{% endblock %}
+{%block descriptions_theme%}{% endblock %}
+{%block descriptions%}{% endblock %}
+{%block heading_theme%}{% endblock %}
+{%block radio_button%}{% endblock %}
+
+{########### Блок относится к данным страницы forms.html.И подключается в файле questions.html#}
+{%block form %}{% endblock %}
+
+{########### Блок относится к данным файла questions.html.И подключается в файле questions.html#}
+{% block quetionsblock %}{% endblock %}
+{% block button_send %}{% endblock %}
+
+{########### Блок относится к данным файла questions.html.И подключается в файле questions.html#}
+{% block forms %}{% endblock %}
+
+{########### Блок относится к данным файла next.html.#}
+{% block block_next %}{% endblock %}
+
+{########### Блок относится к данным файла send.html.#}
+{% block block_send %}{% endblock %}
+
+{########### Блок относится к данным файла documentation.html.#}
+{% block documentation %}{% endblock %}
+</body>
+</html>
+

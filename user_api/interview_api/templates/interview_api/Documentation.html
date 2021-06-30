@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block documentation %}
+<header>{########## В этом файле составляем верстку для документации нашего API}#}
+    <div class="container-md" >
+        <div class="row">
+          <div class="col-sm-12">
+              <div class="div_headerr div_head"><h4 class="questions_polls">Опрос</h4></div>
+          </div>
+        </div>
+    </div>
+</header>
+
+    <div class="container" >
+           <div class="row">
+              <div class="col-sm-12">
+                  <div class="div_documantations">
+                      <div class="">
+                      <h4 class="h4_documantations documentation">Документация по API</h4>
+                      <h4 class="h4_documantations_head api">API нашего приложения</h4>
+                      <h6 class="h4_documantations ids">Id-цифра, ваш уникальный идентификатор</h6>
+                          </div>
+                      <h4 class="h4_documantations_head get">Метод GET</h4>
+                      <div class="div_allapi">
+                      <h6 class="h4_documantationss">connect/api/v6/Id -вход в приложение по этому API,для прохождение опроса</h6>
+                      <h6 class="h4_documantationss">home/api/v6/Id -вход в приложение через приложение по внутреннему API,для прохождение опроса</h6>
+                      <h6 class="h4_documantationss">api/v6/id/-получение ID всех пользователей которые прошли опрос</h6>
+                      <h6 class="h4_documantationss">api/v6/id/answer/questions/-получение всех вопрос-ответ опроса</h6>
+                      <h6 class="h4_documantationss">api/v6/id/answer/answer/radio/-получение ответов пользователей типа выборки Radio</h6>
+                      <h6 class="h4_documantationss">api/v6/id/answer/answer/checkbox/-получение ответов пользователей типа выборки Checkbox</h6>
+                      <h6 class="h4_documantationss">api/v6/id/questions/checkbox/-получение вопросов от ответов пользователей типа выборки Checkbox</h6>
+                      <h6 class="h4_documantationss">api/v6/id/questions/checkbox/-получение вопросов от ответов пользователей типа выборки Radio</h6>
+                      <h6 class="h4_documantationss">api/v6/id/answer/data/first/-получение начало даты и времени прохождения опроса</h6>
+                      <h6 class="h4_documantationss">api/v6/id/answer/data/end/-получение окончание даты и времени прохождения опроса</h6>
+                      <h6 class="h4_documantationss">api/v6/id/theme/questions/-получение категории опроса к которым относяться вопросы</h6>
+                      <h6 class="h4_documantationss">api/v6/id/theme/answer/-получение категории опроса к которым относяться ответы</h6>
+                      <h6 class="h4_documantationss">api/v6/id/theme/id/-получение категории опроса к которым относяться ответы</h6>
+                      </div>
+                  </div>
+              </div>
+           </div>
+    </div>
+{% endblock %}

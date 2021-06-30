@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{########## В этом файле  составляем верстку для страницы входа нашего приложения}#}
+{% block heading %}
+    <header>
+    <div class="container-sm" id="div_cont1">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="div_polls_text">
+                <h4 class="heading_text_question">{% for text in text %}{{ text.text_pols}}{% endfor %}</h4>
+            </div>
+              <div class="div_polls_1">
+                  <ul>
+                      <li class="li_polls"><a class="a_documentasion" href="{% url 'documentations' %}">Документация</a></li>
+                  </ul>
+              </div>
+          </div>
+        </div>
+    </div>
+   </header>
+{% endblock %}
+
+
+{% block polls %}
+<div class="container-sm">
+    <div class="row">
+        <div class="col-sm-12">
+          <div class="div_text_heading">
+              <h4 class="text_polls">{% for text in text %}{{ text.text_entry}}{% endfor %}</h4>
+          </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block ip_text %}
+<div class="container-sm">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="div_text_example">
+              <h3 class="text_example">{% for text in text %}{{ text.text_example_id}}{% endfor %}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% for text in text %}
+    {{ text.text_id }}
+{%endfor%}
+
+{% block id_text %}
+<div class="container-sm">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="div_id_text">
+              <h6 class="text_example">{% for text in text %}{{ text.text_id}}{% endfor %}</h6>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block tracback  %}
+<div class="container-sm">
+    <div class="row">
+        <div class="col-sm-12">
+        <div class="tracback">
+            <h2 class="text_example2">{{ tracback }}</h2>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block search_text %}
+    <div class="container-sm">
+       <div class="row">
+          <div class="col-sm-12">
+          <div class="div_form">
+                    <form action="{% url 'index' %}" method="post">
+                            {% csrf_token %}
+                    <div class="form-group">
+                        <label for="form.text_pols.id_for_label"></label>
+                        {{ form.text_pols }}
+                        <div class="invalid-feedback">
+                            {{ form.text_pols.errors }}
+                        </div>
+                    </div>
+                    <div class="div_button">
+                        <button type="submit" class="btn btn-secondary" id="button">{% for text in text %}{{ text.text_button}}{% endfor %}</button>
+                    {{ form_text }}
+                    </div>
+                    </form>
+                 </div>
+          </div>
+          </div>
+    </div>
+{% endblock %}
+
+
+

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{########## В этом файле  составляем верстку для описания файла questions.html нашего приложения}#}
+{% load teg_user %}
+{% block heading_Questions %}
+<header>
+    <div class="container-md" >
+        <div class="row">
+          <div class="col-sm-12">
+              <div class="div_headerr div_head"><h4 class="questions_polls">Опрос</h4></div>
+          </div>
+        </div>
+    </div>
+</header>
+
+{% endblock %}
+<section>
+{%block heading_descriptions%}
+        <div class="container" >
+           <div class="row">
+              <div class="col-sm-12">
+                  <div class="h3_heading">
+                      {% for my_worlds in questions %}
+                           <h3 class="h3_tb1">
+                              {{ my_worlds.text_polls}}
+                           </h3>
+                      {% endfor %}
+                  </div>
+              </div>
+           </div>
+        </div>
+{% endblock %}
+{%block descriptions_theme%}
+        <div class="container" >
+           <div class="row">
+              <div class="col-sm-12">
+                  <div class="h6_heading">
+                      {% for my_worlds in questions %}
+                           <h6 class="h6_heading">
+                              {{ my_worlds.text_head_handling}}
+                           </h6>
+                      {% endfor %}
+                  </div>
+              </div>
+           </div>
+        </div>
+{% endblock %}
+{%block descriptions%}
+        <div class="container">
+           <div class="row">
+              <div class="col-sm-12">
+                  <div class="p_description">
+                      {% for world in questions %}
+                            <p class="p_width" id="p">
+                            {{ world.text_handling }}
+                            </p>
+                      {% endfor %}
+                  </div>
+              </div>
+           </div>
+        </div>
+{% endblock %}
+{%block heading_theme%}
+        <div class="container" >
+           <div class="row">
+              <div class="col-sm-12">
+                      {% for my_worlds in questions %}
+                          <div class="div_h4_hesding">
+                           <h4 class="h4_heading">
+                              {{ my_worlds.text_for_whom}}
+                           </h4>
+                          </div>
+                      {% endfor %}
+              </div>
+           </div>
+        </div>
+{% endblock %}
+
+
+{% block quetionsblock %}{% include 'interview_api/Questions_andanswer.html' %}{% endblock %}
+{% block forms %}{% include 'interview_api/forms.html' %}{% endblock %}
+</section>
+
+
+
+
+

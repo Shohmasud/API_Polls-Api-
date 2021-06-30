@@ -1,0 +1,27 @@
+    <div class="container container_questions">
+{########## В этом файле  составляем верстку для Вопросов и ответов полученных из нашего базы данных}#}
+       <div class="row">
+          <div class="col-sm-12">
+               <div class="div_blockAll">
+                     {% csrf_token %}
+                       <div class="all_checkButton">
+                            {% for key,value in checkbuttonObj.items%}{########## Получаем сгенерированные вопросы из нашей базы данных}#}
+                                 <div class="div_headblock_answercheckbox"><h4 class="h4_text_checkquestion">{{key}}</h4></div>
+                                 {% for value in value%}{########## Получаем сгенерированные ответы из нашей базы данных}#}
+                                      <div class="div_block_answercheckbox"><h5>{{value}}</h5></div>
+                                 {% endfor %}
+                            {% endfor %}
+                       </div>
+
+                       <div class="divAll_blockRadio">
+                           {% for k,v in radiobuttonObj.items%}
+                               <div class="div_headblock_answerRadio"><h4 class="h4_text_radioquestion">{{k}}</h4></div>
+                               {% for v in v%}
+                                   <div class="div_block_answerRadio"><h5>{{v}}</h5></div>
+                               {% endfor %}
+                           {% endfor %}
+                       </div>
+               </div>
+          </div>
+       </div>
+    </div>
