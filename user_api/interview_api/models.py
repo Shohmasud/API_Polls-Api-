@@ -211,6 +211,15 @@ class Id_forDataTime(models.Model):
         return self.TimeNow_Id
 
 
+ 
+class DataEnd(models.Model):
+    TimeEnd = models.DateTimeField(auto_now_add=False,auto_now=False,blank=True)
+    TimeEnd_rel = models.ManyToManyField(Id_forDataTime)
+    class Meta:
+        verbose_name = '[Автозаполнение]-Дата окочание опроса пользователя(Id)'
+        ordering = ['id']   
+    
+    
 # _______________________________________________________________________________________
 class Datatime(models.Model):
     TimeNow = models.DateTimeField(auto_now_add=False, auto_now=False, blank=True)
@@ -219,11 +228,3 @@ class Datatime(models.Model):
         verbose_name = '[Автозаполнение]-Дата и время старта опроса пользователя(Id)'
         ordering = ['id']
 
-
-# _________________________________________________________________________________________
-class DataEnd(models.Model):
-    TimeEnd = models.DateTimeField(auto_now_add=False,auto_now=False,blank=True)
-    TimeEnd_rel = models.ManyToManyField(Id_forDataTime)
-    class Meta:
-        verbose_name = '[Автозаполнение]-Дата окочание опроса пользователя(Id)'
-        ordering = ['id']
